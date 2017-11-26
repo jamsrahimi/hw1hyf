@@ -1,42 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homework of HYF Week1</title>
-    <style>
-    .typewriter h1 {
-  font-family: monospace; /* Web-safe typewriter-like font */
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 10s steps(13, end),
-    blinking-cursor .5s step-end infinite;
-    text-align: center;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blinking-cursor {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
-    </style>
+    <title>Resume with Flex</title>
+    <link href="main.css" type="text/css"  rel="stylesheet" >
 </head>
-<body>
-    <div class="typewriter">
-        <h2 style="text-align:center; ">Thanks for visiting</h2>
-        <h1>Coming Soon!</h1>
-    </div>
-    
-</body>
+    <body>
+        <div class="wrap">
+            <section  class="left side">
+                <header>Hallo Welcome!
+                    I am Jamshid Rahimi
+            <br>
+            Web developer and Data Scientist.
+                </header>
+                <img src="images/left.jpg" alt="a random image" id="imageLeft">
+                <footer id="leftfooter">
+                    <p> +31-xxx xxx xxx<br>
+                        rahimi@protonmail.com<br>
+                        linkedin.com/in/jamshid/
+                    </p>
+                </footer>
+            </section>
+            
+            <section class="right side">
+      <main>
+          <h2>Introduction</h2>
+          <p class="mainText">
+              I was born in Afghanistan, now I live in Amsterdam, I have studied computer science, mostly worked as an ICT teacher also as an IT. Currently I am focusing on programming. I would like to specialize in Network security in two years time.
+          </p>
+          <p class="mainText">
+              On the Dutch labor there is a hunt for very skilled ICT people, whom usually have up to date skills. Although I have basic knowledge of programming, and IT management but I have never worked with programmers and did not design any advanced website or application by myself yet. But it is not far, I am working on my it. I am following a B2 to C1 Dutch course, and I am married and I have a very smart son.
+              </p>
+        <img class="midImage" src="images/jams-pinhole.jpg" alt="Jamshid's photo taken by a can of coca-cola">
+          Pinhole photo: taken by a can of Coca-cola.          
+          
+          <h2>Education</h2>
+          <ul>
+              <li>
+                  <span>2013 - 2014:</span> PhD in Computer Engineering, Turkey              
+              </li>
+              <li>
+                  <span>2008 - 2010:</span> MSc in Management Information Technology, Thailand
+              </li>
+              <li>
+                  <span>2003 - 2006:</span> BSc in Computer Science, Afghanistan
+              </li>
+          </ul>
+
+        <h2>Work Experience</h2>
+          <ul>
+              <li>
+                  <span>Sept,Oct-2016:</span> IT Trainee, C-International, in Hilversum, The Netherlands              
+              </li>
+              <li>
+                  <span>2010-2013:</span> ICT Junior Faculty, Kabul
+              </li>
+              <li>
+                  <span>2003 - 2008:</span>Computer Teacher, Ariana Afghan Turk High School
+              </li>
+              <li>
+                  <span>2004-2008:</span> IT/GIS Manager, Beller Consultant-2, Kabul
+              </li>
+          </ul>
+        </main>
+
+        <section>
+            <h2>Learning Strategies</h2>
+            <ol>
+                <li>Used Brackets to code: making use of split screen and live preview
+                </li>
+                <li>Googled and came up with idea of spliting horizontally the page in 2.
+                </li>
+                <li>Spent 3 days on getting the flow to work, but at last "flex" helped me!
+                </li>
+                <li>Went through the following materials:
+                    <ol>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=7ZXsPj43heo" target="_blank">CSS Positioning</a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=3tLb3i7GB38&list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw" target="_blank">Responsive Web Design</a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=3tLb3i7GB38&list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw" target="_blank">Responsive Web Design</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>Read all the materials listed here:<a href="https://developer.mozilla.org/en-US/" target="_blank">HYF Cool Github pages</a>
+            </ol>
+            <p>Most important platforms/resources
+            </p>
+            <ul>
+                <li>Hack Your Future Repisatory:<a href="https://github.com/HackYourFuture/" target="_blank"></a>
+                </li>
+            </ul>
+        </section>
+      </section>
+        </div>
+    </body>
 </html>
