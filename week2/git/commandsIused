@@ -1,0 +1,30 @@
+    1  history -w
+    2  history -w >commandsIused.txt
+    3  cat commandsIused.txt 
+    4   grep -v "^#" $HISTFILE >output-file
+    5  cat output-file 
+    6  history >commandsIused.txt 
+    7  cat commandsIused.txt 
+    8  history 1000 >commandsIused.txt 
+    9  cat commandsIused.txt 
+   10  echo "I will repeat the homework, so that this time it is in history and I generate a file using redirection"
+   11  pwd
+   12  mkdir week2
+   13  cd week2/
+   14  vi blank
+   15  touch blank
+   16  echo "Hello" >>greetings.txt;echo "Hello" >>greetings.txt;
+   17  echo "Hello" >>greetings.txt;echo "Hello" >>greetings.txt;
+   18  echo "Hello">>greetings.txt
+   19  cat greetings.txt 
+   20  cp greetings.txt 1.txt;cp greetings.txt 2.txt;cp greetings.txt 3.txt
+   21  cp greetings.txt 4.txt;cp greetings.txt 5.txt
+   22  cat 5.txt 
+   23  echo "cat" pets.txt;echo "dog" pets.txt;echo "hamster" pets.txt
+   24  echo "cat" >pets.txt;echo "dog" >>pets.txt;echo "hamster" >>pets.txt
+   25  cat pets.txt 
+   26  echo "cat" >commands.txt;echo "ls" >>commands.txt;echo "pwd" >>commands.txt
+   27  cat commands.txt 
+   28  grep -f pets.txt commands.txt >>lovelyCommands.txt
+   29  cat lovelyCommands.txt 
+   30  history >commandsIused
