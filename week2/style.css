@@ -32,6 +32,7 @@ h1,h2{
 }
 h3{
     font-family: "IM Fell English";
+    color:orange;
 }
 main, section{
     margin: auto;
