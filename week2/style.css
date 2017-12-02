@@ -1,0 +1,138 @@
+/******* Global Configuration ********/
+@import url(https://fonts.googleapis.com/css?family=Lobster|Allerta|Tangerine:bold|IM+Fell+English:400);
+
+html{
+    font-size: 15px;
+    font-family: 'Allerta', serif;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:focus {
+    outline:none
+}
+::selection {
+    background:#77facc
+}
+body{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+h1,h2{
+    text-align: center;
+    text-shadow: 4px 4px 4px #aaa;
+    font-size: 2.2rem;
+    display: block;
+    margin: 1% auto;
+    clear: both;
+}
+h3{
+    font-family: "IM Fell English";
+}
+main, section{
+    margin: auto;
+    border: 0px;
+    padding: 0px;
+    display: grid;
+}
+
+.grid-item{
+    text-align: center;
+    border: 2px solid green;
+    border-radius: 5%;
+    width: 22%;
+    margin: 1%;
+    padding: 1%;
+    height: 500px;
+}
+.grid-item:hover{
+    border: 2px solid red;
+}
+img{
+    position: relative;
+    width: 100%;
+    margin: 6px auto;
+    background-color: white;
+}
+img:hover {
+    transform: scale(1.1);
+}
+.grid-item:nth-child(1) {
+    width: 46%;
+}
+.grid-item:nth-child(1) img{
+    width:70%;
+}
+/***************** Floats ********************/
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#grid-floats .grid-item{
+    float: left;
+}
+
+/**************** Flex *************/
+#grid-flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content:flex-start;
+}
+#grid-flex .grid-item{
+    flex-wrap: wrap;
+}
+
+
+/**********Breakpoints aka Media Queries*******/
+/************* TV ************/
+
+@media only screen and (min-width:1366){
+    .grid-item:nth-child(1) {
+    width: 45%;
+}
+    .grid-item:nth-child(1) img{
+    width:60%;
+      }
+}
+/************* Tablet ***********/
+      
+@media only screen and (min-width:421px) and (max-width:768px) {
+    .grid-item:nth-child(-n+2) {
+        width: 46%;
+        height: 370px;
+    }
+    .grid-item:nth-child(n+3) {
+     width: 31%;
+        height: 460px;
+    }
+        p{
+        width: 100%;
+        font-size: 0.85rem;
+    }
+}
+/************* Mobile ************/
+
+@media only screen and (max-width:420px) {
+    .grid-item:nth-child(1) {
+        width: 96%;
+        height: 430px;
+    }
+    .grid-item:nth-child(n+2) {
+        width: 48%;
+        height: 470px;
+ 
+    }
+    .grid-item:nth-child(1) img{
+    width:100%;
+}
+    p{
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}
