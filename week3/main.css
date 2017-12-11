@@ -1,0 +1,478 @@
+/***** Global Configuration *****/
+html,body{
+    margin: 0 auto;
+    padding: 0;
+    font-size:100%;
+}
+body {
+ font-family:Calibri,sans-serif;
+ font-weight:normal;
+ font-size:1.125rem;
+ line-height:1.625;
+ font-size:100%;
+ background-color:#f3c;
+}
+body {
+ background-color:#fff;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*Apply it to any parent element in which you need to clear the floats. https://css-tricks.com/snippets/css/clear-fix/ */
+
+
+a {
+ color:#01689b;
+    text-decoration: none;
+}
+a:focus,a:hover {
+ color:#154273;
+}
+a:focus h3,a:hover h3{
+    color:#154273;
+    text-decoration: underline;
+}
+/******** Layout ****************************************/
+
+/**** 1.Header*****/
+#header{
+    background-color:#fff;
+    position:relative;
+    margin: 0 auto;
+}
+#header img{
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: calc(50% - 67px);
+    margin-right: calc(50% - 68px);
+    display: block;
+    overflow:hidden;
+}
+
+/**** 2.navBar*****/
+#navBar {
+    background-color:#01689b;
+    min-height:70px;
+    max-height: 100%;
+    font-weight:normal;
+    display: block;
+}
+#navBar:after {
+    clear: both;
+}
+#navBar:before, #navBar:after {
+    content: " ";
+    display: table;
+}
+nav a,nav a:visited {
+    text-decoration:none;
+    color:#fff;
+}
+nav a:hover {
+    text-decoration:underline;
+}
+
+
+/**** 2.1 UniqHome****/
+.uniqHome {
+    font-size:1.625rem;
+    line-height:1.4em;
+    letter-spacing:.03rem;
+    padding:18px 0;
+    float:left;
+    width:33.33333%;
+    display: block;
+}
+.uniqHome a{
+margin-left: 22%;
+}
+@media(max-width:1024px){
+    .uniqHome {
+        float:left;
+        width:23.33333%;
+        padding:18px 18px;
+        line-height:1.6em;
+        left: 1%;
+ }
+    .uniqHome a{
+        margin-left: 1%;
+}
+}
+/**** 2.2 menu ****/
+nav:nth-child(2){
+    padding: 10px 0;
+    display: block;
+    position: relative;
+    width: 66.6666%;
+    float: left;
+    overflow: visible;
+    max-height: 100%;
+    text-align: right;
+}
+nav:nth-child(2) a{
+    text-align: right;
+    font-size: 1.25rem;
+    display: inline-block;
+    position: relative;
+    margin: 5px 0 0 30px;
+}
+
+/**** 2.3 or 3.0 SearchForm *****/
+#searchForm{
+    position: absolute;
+    top:195px;
+    min-width: 48px;
+    height: 48px;
+    margin: 11px 15px 0 0;
+    left:65%;
+    width:25%;
+    overflow:hidden;
+    padding: 0;
+    text-align: left;
+    display: block;
+    z-index: 10; 
+    right: 0;
+}
+#searchForm .searchInput {
+    float: left;
+    border:0;
+    width:calc(100%);
+    height:48px;
+    margin:0;
+    z-index:11;
+    padding:0 80px 0 10px;
+    font-size:1.025em;
+}     
+#searchForm .searchSubmit {
+    height:48px;
+    width:48px;
+    display:block;
+    position:absolute;
+    right:0;
+    top:0;
+    margin:0;
+    cursor:pointer;
+    background-color:black;
+    background-image:url(images/search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index:12;
+}
+/**** 3 main picture area *****/
+.picArea{
+    position: relative;
+    height: 330px;
+    background-image: url(images/scheiden-hero.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+}
+
+.picArea:after {
+    clear: both;
+}
+.picArea:before, .picArea:after {
+    content: " ";
+    display: table;
+}
+.picArea .copyright {
+    position:absolute;
+    bottom: 0;
+    color:#fff;
+    padding:5px 0 0 10px;
+    line-height:1.375em;
+    text-shadow:1px 1px 4px #000;
+    font-size:.8em;
+}
+.mainLinks {
+    color: #01689b;
+    background-color: white;
+    padding: 0px 25px 0px 0;
+    float: left;
+    width: 25.33333%;
+    position: relative;
+    left: 5%;
+    min-height: 1px;
+    margin: 0 0 0 -25px;
+    border: 0;
+    text-align: left;
+    display: block;
+    top: 30px;
+}
+.mainLinks li{
+    width: 100%;
+    margin: 0 0 5px 0;
+    list-style:none;
+}
+.mainLinks li a{
+    font-weight: bold;
+    color: #01689b;
+    font-size: 1.125rem;
+    text-decoration: none;
+    width: auto;
+    line-height: 1.625rem;
+    word-wrap: break-word;
+}
+/* ref:https://stackoverflow.com/questions/27492191/how-to-make-a-fancy-arrow-using-css */
+.mainLinks li:before {
+    position: relative;
+    /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+    content: "";
+    display: inline-block;
+    /* By using an em scale, the arrows will size with the font */
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 0.2em solid #01689b;
+    border-top: 0.2em solid #01689b;
+    transform: rotate(45deg);
+    margin-right: 0.5em;
+}
+@media(max-width:768px){
+/*
+    #searchForm{
+    position: relative;
+    float: right;
+    margin: 10px 0 15px 0;
+    min-width: 48px;
+    height: 48px;
+    width:100%;
+}
+*/
+
+    .mainLinks {
+    width: 100%;
+
+    left: 5%;
+}
+}
+/**** 4.Main *****/
+
+#main {
+ position:relative;
+ background-color:transparent;
+ padding-bottom:30px;
+}
+#main .wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0 0 0;
+    border: 0;
+    background-color: #f3f3f3;
+}
+.fourItems{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.navItem{
+    width: 23%;
+    flex-wrap: wrap;
+    font-size: 1.45em;
+}
+p{
+    color: black;
+    line-height: 1.375;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+h3{
+    line-height: 1.2em;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+
+/**** Spotlight topics *****/
+.fourItems:nth-child(4){
+    margin-top: 5%;
+}
+.brick{
+    width: 30%;
+    flex-wrap: wrap;
+    font-size: 1.45em;
+    padding: 5px 5px;
+
+}
+.brick img{
+    width: 100%;
+}
+.copyr8pos, .copyr8pos p{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.copyr8pos .copyright{
+    color: white;
+    text-shadow: 1px 1px 4px #000;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    position: absolute;
+    margin-top: -48px;
+    z-index: 10;
+    padding: 5px 0 0 10px;
+}
+.fourItems:nth-child(5){
+    margin-top: 5%;
+}
+.wrapper h2{
+    margin: 0 15px 20px 15px;
+    font-size: 1.625rem;
+    padding-top: 10px;
+    border-top: 1px solid #e1e1e1;
+}
+
+.more{
+    color: #01689b;
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding-top: 3.5%;
+    display: block;
+}
+.more:before {
+    position: relative;
+    /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+    content: "";
+    display: inline-block;
+    /* By using an em scale, the arrows will size with the font */
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 0.2em solid #01689b;
+    border-top: 0.2em solid #01689b;
+    transform: rotate(45deg);
+    margin-right: 0.5em;
+}
+.fourItems:last-child{
+    justify-content: flex-start;
+}
+
+
+}
+@media(max-width:460px){
+    .brick{
+        width: 100%;
+}
+}
+@media(max-width:1024px){
+.navItem{
+    width: 48%;
+    flex-wrap: wrap;
+    font-size: 1.45em;
+}
+    .brick{
+    width: 46%;
+    flex-wrap: wrap;
+    font-size: 1.45em;
+}
+}
+@media(max-width:768px){
+.navItem{
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 1.45em;
+}
+}
+
+/**** Footer *****/
+#footer{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.fwrapper{
+    background-color:#01689b;
+    border:0;
+    padding:50px 0;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.payoff{
+    width: 58.33333%;;
+    position: relative;
+    font-size: 1.75em;
+    padding: 0 15px 25px 15px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.2381;
+}
+.payoff span{
+    display: block;
+    position: relative;
+    float: left;
+    width: 83.33333%;
+}
+.column{
+    width: 16.66667%;
+}
+.column ul,.column h2 {
+    margin:0;
+    padding:0;
+}
+.column ul li, .languages ul li {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+}
+.column ul li a {
+    color: #fff;
+padding: 2px 0 2px 0;
+}
+.column ul li a:hover {
+    text-decoration: underline;
+}
+
+.languages ul li {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    display:inline-block;
+    float:none;
+    width:auto;
+}
+
+.languages .wrapper {
+ padding:30px 15px;
+}
+
+.languages .wrapper ul {
+ text-align:center;
+}
+
+.languages .wrapper ul li a {
+ padding:5px 10px 5px 10px;
+ background:0;
+ border:1px solid #b2d7ee;
+ color:#007bc7;
+ margin:5px 5px 5px 0;
+ font-size:.95em;
+ text-decoration:none;
+ float:left;
+}
+.languages ul li.selected {
+    background-color:black;
+    border:1px dotted red;
+    color:black;
+    font-size:1.25em;
+}
+/****** Media Queries ***********/
+@media(max-width:768px){
+.payoff{
+    width: 100%;
+}
+.payoff span{
+    display: block;
+    position: relative;
+    float: left;
+    width: 83.33333%;
+}
+.column{
+    width: 40%;
+}
+}
